@@ -7,7 +7,7 @@ public interface ThirdInterface {
     }
 
     /**
-     * static được dùng cho default
+     * static được sử dụng thông qua default, nói cách khác static được sử dụng cho default.
      *
      * Nếu static đổi thành default, thì print sẽ sử dụng isNull trong ThirdImpl
      *
