@@ -36,8 +36,4 @@ public interface GenericsInterface<I> {
         return getNumber(data);
     }
 
-    default Integer getSum(Integer data) {
-        return number + data;
-    }
-
 }
