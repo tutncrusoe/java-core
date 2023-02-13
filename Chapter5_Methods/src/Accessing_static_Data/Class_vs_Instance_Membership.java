@@ -4,19 +4,19 @@ public class Class_vs_Instance_Membership {
 }
 
 class MantaRay extends Class_vs_Instance_Membership {
-    private String name = "Sammy"; // instance variable.
+    private String name = "Sammy";  // instance variable.
 
-    public static void first() { // static method
+    public static void first() {    // static method
     }
 
-    public static void second() { // static method
+    public static void second() {   // static method
     }
 
     public void third() {
-        System.out.print(name);// third() is referring to an instance variable 'name'.
+        System.out.print(name);     // third() is referring to an instance variable 'name'.
     }
 
-    public static void main(String[] args) { // static method
+    public static void main(String[] args) {    // static method
         // all theses are instance method.
         first();
         second();
@@ -26,7 +26,7 @@ class MantaRay extends Class_vs_Instance_Membership {
         // 1. The first solution would have been to call third() as an instance method and not use
         //static for the method or the variable.
         var ray = new MantaRay();
-        ray.third(); // third() in this situation is an instance method.
+        ray.third();    // third() in this situation is an instance method.
     }
 
     /*
@@ -50,46 +50,46 @@ static variables.
 
 class Giraffe extends Designing_static_Methods_and_Variables {
     // static method vs instance method calls
-    public void eat(Giraffe g) { // instance method
+    public void eat(Giraffe g) {    // instance method
         allGiraffeGoHome(g);
         allGiraffeComeOut();
         drink();
         g.eat(g);
     }
 
-    public void drink() { // instance method
+    public void drink() {   // instance method
     }
 
-    public static void allGiraffeGoHome(Giraffe g) { // static method
+    public static void allGiraffeGoHome(Giraffe g) {    // static method
         allGiraffeComeOut();
         g.eat(g);
     }
 
-    public static void allGiraffeComeOut() { // static method
+    public static void allGiraffeComeOut() {    // static method
     }
 }
 
 class Gorilla extends Class_vs_Instance_Membership {
     public static int count;
 
-    public static void addGorilla() { // static method
-        count++; //  both static and instance methods can refer to a static variable.
+    public static void addGorilla() {   // static method
+        count++;    //  both static and instance methods can refer to a static variable.
         // static method => static variable.
     }
 
-    public void babyGorilla() { // instance method
+    public void babyGorilla() {         // instance method
         count++; //  both static and instance methods can refer to a static variable.
         // instance method => static variable.
     }
 
-    public void announceBabies() { // an instance method can call a static method.
-        addGorilla();   // static method
-        babyGorilla();  // instance method
+    public void announceBabies() {      // an instance method can call a static method.
+        addGorilla();                   // static method
+        babyGorilla();                  // instance method
         // instance method => static and instance method.
     }
 
     public static void announceBabiesToEveryone() {
-        addGorilla();   // static method
+        addGorilla();                   // static method
         babyGorilla();  // DOES NOT COMPILE because a static method cannot call an instance method.
         // static method =/=> instance method.
     }
