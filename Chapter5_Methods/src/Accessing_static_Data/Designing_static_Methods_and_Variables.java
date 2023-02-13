@@ -6,7 +6,11 @@ public class Designing_static_Methods_and_Variables {
 class Penguin extends Designing_static_Methods_and_Variables {
 
     /*
-    - You can think of a static variable as being a member of the single class object that exists independently of any instances of that class.
+    - Methods and variables declared static don’t require an instance of the class. They are shared among all
+users of the class.
+    - You can think of a static variable as
+being a member of the single class object that exists independently of any instances of that
+class.
     - The nameOfTallestPenguin field is static and therefore shared, though
     , so anytime it is updated, it impacts all instances of the class.
      */
@@ -15,7 +19,7 @@ class Penguin extends Designing_static_Methods_and_Variables {
     static String nameOfTallestPenguin;
 
     {
-        var p1 = new Penguin();
+        var p1 = new Penguin(); // p1 is a penguin instance
         p1.name = "Lilly";
         p1.nameOfTallestPenguin = "Lilly";
         var p2 = new Penguin();
